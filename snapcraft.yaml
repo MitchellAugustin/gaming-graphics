@@ -46,11 +46,11 @@ package-repositories:
     # short syntax. So use the full version instead.
 
     # ppa: kisak/kisak-mesa
-    url: http://ppa.launchpad.net/kisak/kisak-mesa/ubuntu
+    url: http://ppa.launchpad.net/mitchellaugustin/steam-snap-enablement/ubuntu
     suites: [noble]
     components: [main]
     architectures: [amd64, i386, arm64]
-    key-id: EB8B81E14DA65431D7504EA8F63F0F2B90935439
+    key-id: 1D4F9CE6E1492B69C43E95A3D60AFA41A606BC01
     key-server: keyserver.ubuntu.com
 
 parts:
@@ -104,6 +104,11 @@ parts:
         # Only needed in the kisak branches, oibaf picks these up from the PPA
         - libxml2
         - libstdc++6
+        - libegl-mesa0
+        - libgbm1
+        - libgl1-mesa-dri
+        - libllvm20
+        - mesa-libgallium
     stage:
       - -usr/share/doc
       - -usr/share/man
